@@ -92,16 +92,144 @@ git branch -d branch1
 </details>
 
 <details>
-<summary>Explain the difference between revert and reset</summary>
+<summary>Explain the difference between revert and reset</summary><b><br>
+
+</b>
 </details>
 
+<details> 
+<summary> Explain what is <code>git directory</code>, <code>working directory</code> and <code>staging area</code></summary><b><br>
+
+</b>
+</details>
+
+<details>
+<summary>What is the difference between git pull and git fetch </summary><b><br>
+
+``` git pull = git fetch + git merge ```
+
+When you run git pull, it gets all the changes from the remote or central repository and attaches it to your corresponding branch in your local repository.
+
+git fetch gets all the changes from the remote repository, stores the changes in a separate branch in your local repository
+</b>
+</details>
+
+<details>
+<summary>Explain what is gitignore used for</summary><b><br>
+
+The purpose of `gitignore` files is to ensure that certain files not tracked by Git remain untracked. To stop tracking a file that is currently tracked, use git rm --cached.
+</b>
+</details>
+
+<details>
+<summary>What does git status do?</summary><b><br>
+
+`git status` helps you to understand the tracking status of files in your repository. Focusing on working directory and staging area - you can learn which changes were made in the working directory, which changes are in the staging area and in general, whether files are being tracked or not.
+</b>
+</details>
+
+<details>
+<summary>If you have done some changes in a file the which command you can use to see changes before committing them.</summary><b><br>
+
+`git diff`
+</b>
+</details>
+
+<details>
+<summary>You have files in your repository you don't want Git to ever track them. What should you be doing to avoid ever tracking them?</summary><b><br>
+
+You can put the filename in `.gitignore` file, which prevent it from adding it to staging area. Thus tracking can be prevented
+</b>
+</details>
+
+<details>
+<summary>You have 2 branches, main and feature for example, how will you make sure that feature is in sync with main</summary><b><br>
+
+```console
+git checkout main # to make sure head is on main branch
+git pull # to pull all changes from remote server on your local repo
+git checkout feature # to move your head on feature branch
+git merge main # this will merge all main branches changes with feature branch.
+```
+</b>
+</details>
+
+<details>
+<summary>What unstaged means in regards to Git?</summary><b><br>
+
+A file which is still in working directory, yet not added to staging area. This file cannot be tracked.
+</b>
+</details>
+
+<details>
+<summary>Explain what is merge conflicts. And how can we solve that issue</summary><b><br>
 
 
+</b>
+</details>
 
+<details>
+<summary>Explain the use case of git rebase</summary><b><br>
 
+Suppose a team is working on a `feature` branch that is coming from the `main` branch of the repo. At a point, where the feature development is done, and finally we wish to merge the feature branch into the main branch without keeping the history of the commits made in the feature branch, a `git rebase` will be helpful.
+</b>
+</details>
 
+<details>  
+<summary>Explain <code>git cherry-pick</code> command</summary><b><br>
 
+</b>
+</details>
 
+<details>
+<summary>Explain <code>git stash</code> command</summary><b><br>
 
+</b>
+</details>
+
+<details>
+<summary>Explain <code>git squash</code> command</summary><b><br>
+
+</b>
+</details>
+
+<details>
+<summary>Explain what is github token. And how can we use that to connect with remote server</summary><b><br>
+
+</b>
+</details>
+
+<details>
+<summmary>How to unstaged files</summmary><b><br>
+
+</b>
+</details>
+
+<details>
+<summary>How to git clone using ssh/summary><b><br>
+
+</b>
+</details>
+
+<details>
+<summary>How to clone git repository using path</summary><b><br>
+
+</b>
+</details>
+
+<details>
+<summary>Explain <code>git remote add origin url</code></summary><b><br>
+
+`git remote add` : This command is used to add remote repo to our local server.<br>
+`name` : It is like a shorthand reference to our url. This is the name that we want to give to the remote repository.<br>
+`url` : It is the url of repository that we want to add.<br>
+
+How can we rename the above shorthand refernece<br>
+`git remote rename <old_name> <new_name>`
+
+How to remove the shorthand reference<br>
+`git remote remove <name>`
+</b>
+</details>
 
 
