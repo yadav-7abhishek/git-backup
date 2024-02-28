@@ -184,6 +184,28 @@ Suppose a team is working on a `feature` branch that is coming from the `main` b
 <details>
 <summary>Explain <code>git stash</code> command</summary><b><br>
 
+Suppose you are implementing a new feature for your product. Your code is in progress and suddenly a business escalation comes.<br>
+Because of this, you have to keep aside your new feature you are working on for somtimes.<br>
+Now, we can't commit our partial code and also cannot throw away our changes. So we need some temporary storage when you can store your partial changes and later on commit it.<br>
+To stash an item, it applies only on the modified files not on new files.
+
+```hcl
+# to stash an item
+git stash
+
+# to see stashed items list
+git stash list
+
+# to apply stashed items
+git stash apply <stash_id>
+
+# to clear stash items
+git stash clear
+
+# to reapply changes
+git stash pop
+```
+The git stash pop command is quite similar to git stash apply. The main difference between both of these commands is stash pop command that deletes the stash from the stack after it is applied.
 </b>
 </details>
 
