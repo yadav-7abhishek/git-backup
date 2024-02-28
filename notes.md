@@ -192,6 +192,16 @@ Suppose a team is working on a `feature` branch that is coming from the `main` b
 <details>  
 <summary>Explain <code>git cherry-pick</code> command</summary><b><br>
 
+Git cherry pick is a command used to apply a specific commit from one branch to another. It allows you to select individual commits and incorporate them into another branch, providing more granular control over the changes you want to include.<br>
+
+Let's say we have two branches 'main' and 'feature'. We have made commit in feature branch and want to include that in main branch.
+
+```hcl
+# apply single commit
+git cherry-pick <commit_id>
+
+# applying multiple commits
+git cherry-pick <commit_id1> <commit_id2> <commit_id3>
 </b>
 </details>
 
@@ -236,8 +246,19 @@ The git stash pop command is quite similar to git stash apply. The main differen
 </details>
 
 <details>
-<summmary>How to unstaged files</summmary><b><br>
+<summary>How to unstaged files</summary><b><br>
 
+`git reset -- <file_name>` will unstage any staged changes for the given file(s).
+</b>
+</details>
+
+<details>
+<summary>How to remove untracked files?</summary><b><br>
+
+`git clean [-d] [-f] [-n]`<br>
+f--->To remove the unstaged files, we have to use the git clean command with the -f flag.<br>
+n---> This lists out all the files that are going to be removed using the git clean command.<br>
+d---> This lists out all the files and directories that are going to be removed using the git clean command.
 </b>
 </details>
 
