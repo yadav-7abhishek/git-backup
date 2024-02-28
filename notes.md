@@ -164,7 +164,21 @@ A file which is still in working directory, yet not added to staging area. This 
 <details>
 <summary>Explain what is merge conflicts. And how can we solve that issue</summary><b><br>
 
+When same name file is been editing with two different branches(note that content of the file should be different), if we merge then conflicts occurs.
 
+case1: Consider in main branch in file.txt file a statement is written like<br>
+`Hi, My name is Abhishek`<br>
+And then there is another branch named feature1nthat has statement as follows<br>
+`Hi, My name is Abhishek. I am a boy`<br>
+In such case conflict will not occur.<br>
+
+case2: Consider in main branch in file.txt file a statement is written like<br>
+`Hi, My name is Abhishek`<br>
+And then there is another branch named feature1nthat has statement as follows<br>
+`I am a boy`<br>
+In such case conflict will occur.<br>
+We can solve this issue by opening the editor and decide how we wanted the content to be formatted.<br>
+Thus after that we can add the file in staging area and commit the changes.
 </b>
 </details>
 
