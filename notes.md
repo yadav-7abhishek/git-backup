@@ -80,7 +80,8 @@ git branch -d branch1
 <details>
 <summary>What does head represents in git?</summary><b><br>
 
-
+HEAD is the reference to the most recent commit in the current branch. This means HEAD is just like a pointer that keeps track of the latest commit in your current branch.<br>
+For eg: Suppose you have a file that has 2 branch main and dev, first you have made two commit in main branch c1,c2. Then switched to dev branch and have commit c3,c4. So the head will be on c4. And now i have switched again to the main branch. So now the head will be on c2. 
 </b>
 </details>
 
