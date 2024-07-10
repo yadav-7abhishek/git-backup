@@ -87,13 +87,43 @@ For eg: Suppose you have a file that has 2 branch main and dev, first you have m
 
 <details>
 <summary>Explain difference between git rebase and merge</summary><b><br>
+   
+*Merge*: Creates a new commit that combines the histories of the two branches.
+```
+   A--B--C--F                     A--B--C--F
+        \                              \
+         D--E                           D--E--M
+```
 
-
+*Rebase*: Rewrites history by replaying the commits from one branch (usually the feature branch) on top of another branch (usually the main branch)
+```
+   A--B--C--F                     A--B--C--F
+        \                                   \
+         D--E                                D'--E'
+```
 </b>
 </details>
 
 <details>
 <summary>Explain the difference between revert and reset</summary><b><br>
+
+*git revert*: git revert is a command that creates a new commit that undoes the changes made in a previous commit. 
+This is useful when you want to reverse a specific change in your project’s history.<br>
+
+Let say we have 3 commit, A-B-C<br>
+If we do `git revert head`
+This will create a new commit D that undoes the changes made in C<br>
+`A-B-C-D`
+
+Now, project still has history of commit C incase we have to refer it.
+
+*git reset*: git reset is a powerful command that is used to undo changes in your Git repository. 
+Unlike git revert, which creates a new commit to undo changes, git reset actually moves the HEAD pointer to a specified commit, 
+effectively “forgetting” any commits that may come after it.
+
+Let say we have 3 commit, A-B-C
+If we do `git reset head`
+This will delete commit C, and move head to commit B
 
 </b>
 </details>
@@ -101,6 +131,12 @@ For eg: Suppose you have a file that has 2 branch main and dev, first you have m
 <details> 
 <summary> Explain what is <code>git directory</code>, <code>working directory</code> and <code>staging area</code></summary><b><br>
 
+*Working area*:-  This is where you perform all your edits and create new files. It holds the current state of your project<br>
+*Staging area*:-  After making changes in your working directory that you want to commit, you first “add” these changes to the staging area.<br>
+				      It takes a snapshot of the changes, preparing them for a commit.<br>
+*Git directory*:- Also know as repository.  When you’re ready, you “commit” the changes that have been added to your staging area.<br>
+				      This is where Git stores the metadata and object database for your project. This is the most important part of Git,<br> 
+				      and it is what is copied when you clone a repository from another computer.<br>
 </b>
 </details>
 
