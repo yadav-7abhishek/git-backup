@@ -1,4 +1,14 @@
 <details>
+<summary>Key points in git</summary>
+	1.  What is VCS, and types of VCS (DVCS and CVCS)
+	2. What is GIT and GitHub
+	3. Basic git and github terminology
+	4. Git command with handson
+	5. branching,head,rebase,merge,revert,reset,push,pull,fetch,gitignore,git status, git diff, cherry-pick,squash, unstage, git clean
+	6. Open source contribution
+</details>
+
+<details>
 <summary>What is GIT/</summary><b><br>
 
 Git is a version control system that allows you to track changes to files and coordinate work on those files among multiple people.
